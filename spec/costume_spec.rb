@@ -1,4 +1,4 @@
-require_relative 'spec_helper'
+require_relative "spec_helper"
 
 describe "Costume" do
   let(:hot_dog) { Costume.create(name: "Unisex Adult Hot Dog Costume") }
@@ -18,11 +18,15 @@ describe "Costume" do
   end
 
   it "has an image_url (string)" do
-    penguin = Costume.create(
-      name: "Happy Penguin",
-      image_url: "http://img.costumecraze.com/images/vendors/rasta/7139-large.jpg"
+    penguin =
+      Costume.create(
+        name: "Happy Penguin",
+        image_url:
+          "http://img.costumecraze.com/images/vendors/rasta/7139-large.jpg"
+      )
+    expect(penguin.image_url).to eq(
+      "http://img.costumecraze.com/images/vendors/rasta/7139-large.jpg"
     )
-    expect(penguin.image_url).to eq("http://img.costumecraze.com/images/vendors/rasta/7139-large.jpg")
   end
 
   it "knows when it was created (hint: use t.timestamps in the migration)" do
@@ -32,5 +36,4 @@ describe "Costume" do
   it "knows when it was last updated (hint: use t.timestamps in the migration)" do
     expect(hot_dog.updated_at).to be_a_kind_of(Time)
   end
-
 end

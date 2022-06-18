@@ -1,4 +1,4 @@
-require_relative 'spec_helper'
+require_relative "spec_helper"
 
 describe "CostumeStore" do
   let(:spirit_halloween) { CostumeStore.create(name: "Spirit Halloween") }
@@ -38,5 +38,4 @@ describe "CostumeStore" do
     spirit_halloween.update(closing_time: now)
     expect(spirit_halloween.closing_time).to eq(now)
   end
-
 end

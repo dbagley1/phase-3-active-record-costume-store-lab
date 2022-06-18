@@ -101,7 +101,7 @@ shiloh.breed = "Beagle"
 shiloh.save
 # => true
 
-Dog.find_by(:name => "Shiloh") == shiloh
+Dog.find_by(name: "Shiloh") == shiloh
 # => true
 ```
 
@@ -160,7 +160,7 @@ Candy.create(name: "Reese's Peanut Butter Cups", calories: 210)
 Retrieving information is just as painless:
 
 ```ruby
-reeses = Candy.find_by(:name => "Reese's Peanut Butter Cups")
+reeses = Candy.find_by(name: "Reese's Peanut Butter Cups")
 # => #<Candy id: 3, name: "Reese's Peanut Butter Cups", calories: 210>
 Candy.first
 # => #<Candy id: 1, name: "Milky Way Midnight", calories: 220>
@@ -184,12 +184,12 @@ Updating information and viewing table info is also quite simple:
 ```ruby
 snickers = Candy.find(2)
 # => #<Candy id: 2, name: "Snickers", calories: 550>
-snickers.update(:calories => 250)
+snickers.update(calories: 250)
 # => true
 
 reeses = Candy.last
 # => #<Candy id: 3, name: "Reese's Peanut Batter Cups", calories: 210>
-reeses.update(:name => "Reeeese's Peanut Butter Cups")
+reeses.update(name: "Reeeese's Peanut Butter Cups")
 # => true
 
 Candy.find(2)

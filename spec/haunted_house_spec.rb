@@ -1,4 +1,4 @@
-require_relative 'spec_helper'
+require_relative "spec_helper"
 
 describe "HauntedHouse" do
   let(:asylum) { HauntedHouse.create(name: "The Asylum") }
@@ -55,5 +55,4 @@ describe "HauntedHouse" do
     asylum.update(description: description)
     expect(asylum.description).to eq(description)
   end
-
 end
